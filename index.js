@@ -270,8 +270,14 @@ function getModelYears(inventory) {
  * with a `car_year` which is at most the given desired max year,
  * in the same order as they appear in the original inventory.
 */
-function getOlderCars(/* code here */) {
-  /* code here */
+function getOlderCars(inventory, maxYear) {
+  let olderCars = [];
+  for (let i = 0; i < inventory.length; i++) {
+    if (inventory[i].car_year <= maxYear) {
+      olderCars.push(inventory[i])
+    }
+    return olderCars;
+  }
 }
 
 /**
@@ -291,7 +297,7 @@ function getGermanCars(arr) {
 
   for (let i = 0; i <arr.length; i++) {
     
-    if (arr[i].car_make == 'Audi' || arr [i].car_make === 'Mercedes-Benz' || arr [i].car_make == 'Volkswagen' || arr [i].car_make === 'BMW') {
+    if (arr[i].car_make == 'Audi' || arr [i].car_make == 'Mercedes-Benz' || arr [i].car_make == 'Volkswagen' || arr [i].car_make == 'BMW') {
       newModels.push(arr[i]);
       
       console.log(newModels);
