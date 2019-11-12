@@ -43,15 +43,12 @@ function addNumbers(num1, num2) {
 
 
 
-function makePersonObject(userid, userName, userEmail) {
+function makePersonObject(id, name, email) {
   /* code here */
   return {
-  id : userid,
-  name : userName,
-  email : userEmail
-  }  
+    id, name, email}  
 }
-console.log(makePersonObject(5, "Leia", "leia@leia.com"));
+makePersonObject(5, "Leia", "leia@leia.com")
 
 
 
@@ -324,9 +321,15 @@ function getGermanCars(arr) {
  *   return num * 2
  * }
 */
-const sum = null; // code here!
-const addFive = null; // code here!
-const argTimesTwo = null; // code here!
+const sum = (a, b) => {
+  return a + b;
+};
+const addFive = num => {
+  return num + 5;
+};
+const argTimesTwo = num => {
+  return num * 2;
+}
 
 /**
  * ### Challenge `carMaker`
