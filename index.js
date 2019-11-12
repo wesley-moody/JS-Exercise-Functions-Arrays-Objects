@@ -155,9 +155,7 @@ var inventory = [
 
 
 function get3rdCar(inventory) {
-  const the3rd = inventory.find((item, index) => {
-    return index === 2 // we use 2 because index is zero-based.
-  })
+  const the3rd = inventory.find((item, index) => { return index === 2 })
   return `The car is a ${the3rd.car_make} ${the3rd.car_model}`
 }
 
@@ -252,7 +250,7 @@ function sortCarInventory(inventory) {
  * getModelYears returns an array containing all the 'car_year's in the inventory.
 */
 function getModelYears(inventory) {
-  /* code here */
+  const carYears = inventory
 }
 
 /**
